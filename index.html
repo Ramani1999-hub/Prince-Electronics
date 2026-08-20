@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Prince Electronics | Smart TVs</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080b12;
+    color: white;
+}
+
+/* NAVBAR */
+
+.navbar {
+    width: 100%;
+    padding: 20px 7%;
+    background: #0d111b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #222936;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #00d4ff;
+}
+
+.logo span {
+    color: white;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #ddd;
+    margin-left: 30px;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #00d4ff;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 620px;
+    padding: 70px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background:
+        radial-gradient(circle at 80% 50%, #12344a, transparent 35%),
+        #080b12;
+}
+
+.hero-content {
+    width: 48%;
+}
+
+.small-title {
+    color: #00d4ff;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: 58px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #00d4ff;
+}
+
+.hero p {
+    color: #aeb7c7;
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 550px;
+}
+
+.hero-price {
+    margin-top: 25px;
+}
+
+.new-price {
+    font-size: 34px;
+    color: #00d4ff;
+    font-weight: bold;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #777;
+    margin-left: 12px;
+}
+
+.offer {
+    display: inline-block;
+    background: #00d4ff;
+    color: #061018;
+    padding: 7px 13px;
+    border-radius: 20px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.buttons {
+    margin-top: 30px;
+}
+
+.btn {
+    padding: 14px 28px;
+    border-radius: 30px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+.primary {
+    background: #00d4ff;
+    color: #061018;
+    font-weight: bold;
+}
+
+.primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,212,255,0.3);
+}
+
+.secondary {
+    background: transparent;
+    border: 1px solid #00d4ff;
+    color: #00d4ff;
+}
+
+.secondary:hover {
+    background: #00d4ff;
+    color: #061018;
+}
+
+
+/* TV IMAGE */
+
+.hero-tv {
+    width: 47%;
+    text-align: center;
+}
+
+.tv-frame {
+    display: inline-block;
+    padding: 10px;
+    background: #151b26;
+    border-radius: 15px;
+    box-shadow: 0 0 50px rgba(0,212,255,0.15);
+}
+
+.tv-frame img {
+    width: 100%;
+    max-width: 560px;
+    display: block;
+    border-radius: 8px;
+}
+
+
+/* FEATURES */
+
+.features {
+    background: #101620;
+    padding: 45px 7%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.feature {
+    text-align: center;
+    padding: 25px;
+    border: 1px solid #252d3b;
+    border-radius: 12px;
+    background: #0c1119;
+}
+
+.feature-icon {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.feature h3 {
+    margin-bottom: 8px;
+}
+
+.feature p {
+    color: #8993a4;
+    font-size: 14px;
+}
+
+
+/* SECTION */
+
+.section {
+    padding: 80px 7%;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.heading h2 {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.heading p {
+    color: #8993a4;
+}
+
+
+/* PRODUCTS */
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: #101620;
+    border: 1px solid #242d3b;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: #00d4ff;
+}
+
+.card-image {
+    height: 230px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 22px;
+}
+
+.rating {
+    color: #ffc107;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #8993a4;
+    line-height: 1.5;
+}
+
+.card-price {
+    color: #00d4ff;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 18px 0;
+}
+
+.cart {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #00d4ff;
+    color: #061018;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* SPECIFICATIONS */
+
+.spec-section {
+    background: #101620;
+}
+
+.spec-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.spec-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #0b1018;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.spec-table td {
+    padding: 17px 20px;
+    border-bottom: 1px solid #252d3b;
+}
+
+.spec-table td:first-child {
+    color: #00d4ff;
+    font-weight: bold;
+    width: 40%;
+}
+
+
+/* ABOUT */
+
+.about {
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
+}
+
+.about p {
+    color: #9ca6b6;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+.numbers {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 40px;
+}
+
+.number h2 {
+    color: #00d4ff;
+    font-size: 35px;
+}
+
+.number p {
+    font-size: 14px;
+}
+
+
+/* REVIEWS */
+
+.reviews {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.review {
+    background: #101620;
+    border: 1px solid #252d3b;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.review p {
+    color: #aeb7c7;
+    line-height: 1.6;
+    margin-top: 12px;
+}
+
+.reviewer {
+    color: #00d4ff;
+    margin-top: 18px;
+    font-weight: bold;
+}
+
+
+/* CONTACT */
+
+.contact {
+    background: #101620;
+    text-align: center;
+}
+
+.contact-box {
+    margin-top: 30px;
+}
+
+.contact-box p {
+    margin: 12px;
+    color: #aeb7c7;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #05070b;
+    padding: 30px 7%;
+    text-align: center;
+    color: #777;
+}
+
+footer strong {
+    color: #00d4ff;
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width: 850px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar a {
+        margin: 0 8px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content,
+    .hero-tv {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        margin: auto;
+    }
+
+    .hero-tv {
+        margin-top: 40px;
+    }
+
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .products,
+    .reviews {
+        grid-template-columns: 1fr;
+    }
+
+    .numbers {
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+}
+
+@media(max-width: 500px) {
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .section {
+        padding: 55px 5%;
+    }
+
+    .numbers {
+        flex-direction: column;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- NAVIGATION -->
+
+<header class="navbar">
+
+    <div class="logo">
+         Prince <span>Electronics</span>
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#products">TVs</a>
+        <a href="#specifications">Specifications</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="small-title">
+            PRINCE ELECTRONICS • PREMIUM COLLECTION
+        </div>
+
+        <h1>
+            Experience TV
+            <span>Like Never Before.</span>
+        </h1>
+
+        <p>
+            Meet the new Prince Vision 55" 4K Smart TV.
+            Enjoy breathtaking picture quality, immersive sound
+            and your favourite entertainment in one premium display.
+        </p>
+
+        <div class="hero-price">
+
+            <span class="new-price">₹34,999</span>
+
+            <span class="old-price">₹49,999</span>
+
+            <span class="offer">30% OFF</span>
+
+        </div>
+
+        <div class="buttons">
+
+            <button class="btn primary" onclick="buyNow()">
+                🛒 Buy Now
+            </button>
+
+            <button class="btn secondary"
+                    onclick="document.getElementById('specifications').scrollIntoView()">
+                View Specifications
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-tv">
+
+        <div class="tv-frame">
+
+            <img
+            src="https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=1000&q=80"
+            alt="Prince Vision 55 inch Smart TV">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FEATURES -->
+
+<section class="features">
+
+    <div class="feature">
+
+        <div class="feature-icon">🚚</div>
+
+        <h3>Free Delivery</h3>
+
+        <p>Fast delivery across India.</p>
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="feature-icon">🛡️</div>
+
+        <h3>1 Year Warranty</h3>
+
+        <p>Reliable product protection.</p>
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="feature-icon">🔐</div>
+
+        <h3>Secure Payment</h3>
+
+        <p>100% secure checkout.</p>
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="feature-icon">⚡</div>
+
+        <h3>Energy Efficient</h3>
+
+        <p>Designed for efficient performance.</p>
+
+    </div>
+
+</section>
+
+
+<!-- PRODUCTS -->
+
+<section class="section" id="products">
+
+    <div class="heading">
+
+        <h2>Our Premium TVs</h2>
+
+        <p>Choose the perfect screen for your home.</p>
+
+    </div>
+
+
+    <div class="products">
+
+
+        <div class="card">
+
+            <div class="card-image">
+
+                <img
+                src="https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=800&q=80"
+                alt="55 inch 4K Smart TV">
+
+            </div>
+
+            <div class="card-content">
+
+                <div class="rating">★★★★★</div>
+
+                <h3>Prince Vision 55" 4K</h3>
+
+                <p>
+                    4K Ultra HD display with Smart TV
+                    entertainment and immersive sound.
+                </p>
+
+                <div class="card-price">₹34,999</div>
+
+                <button class="cart" onclick="addCart('Prince Vision 55 inch 4K')">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-image">
+
+                <img
+                src="https://images.unsplash.com/photo-1601944177325-f8867652837f?auto=format&fit=crop&w=800&q=80"
+                alt="43 inch Smart TV">
+
+            </div>
+
+            <div class="card-content">
+
+                <div class="rating">★★★★☆</div>
+
+                <h3>Prince Vision 43" Full HD</h3>
+
+                <p>
+                    Compact Full HD Smart TV with
+                    beautiful colours and clear sound.
+                </p>
+
+                <div class="card-price">₹24,999</div>
+
+                <button class="cart" onclick="addCart('Prince Vision 43 inch Full HD')">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-image">
+
+                <img
+                src="https://images.unsplash.com/photo-1461151304267-38535e780c79?auto=format&fit=crop&w=800&q=80"
+                alt="65 inch 4K Ultra HD TV">
+
+            </div>
+
+            <div class="card-content">
+
+                <div class="rating">★★★★★</div>
+
+                <h3>Prince Vision 65" Ultra HD</h3>
+
+                <p>
+                    Massive 65-inch 4K display for
+                    a cinematic home entertainment experience.
+                </p>
+
+                <div class="card-price">₹54,999</div>
+
+                <button class="cart" onclick="addCart('Prince Vision 65 inch Ultra HD')">
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- SPECIFICATIONS -->
+
+<section class="section spec-section" id="specifications">
+
+    <div class="heading">
+
+        <h2>Prince Vision 55" Specifications</h2>
+
+        <p>Everything you need to know about your new TV.</p>
+
+    </div>
+
+
+    <div class="spec-container">
+
+        <table class="spec-table">
+
+            <tr>
+                <td>Display Size</td>
+                <td>55 Inches</td>
+            </tr>
+
+            <tr>
+                <td>Resolution</td>
+                <td>4K Ultra HD – 3840 × 2160</td>
+            </tr>
+
+            <tr>
+                <td>Display Type</td>
+                <td>LED</td>
+            </tr>
+
+            <tr>
+                <td>Refresh Rate</td>
+                <td>60 Hz</td>
+            </tr>
+
+            <tr>
+                <td>Smart TV</td>
+                <td>Yes</td>
+            </tr>
+
+            <tr>
+                <td>Connectivity</td>
+                <td>Wi-Fi, Bluetooth, HDMI, USB</td>
+            </tr>
+
+            <tr>
+                <td>Sound Output</td>
+                <td>30W Stereo Speakers</td>
+            </tr>
+
+            <tr>
+                <td>Operating System</td>
+                <td>Smart TV OS</td>
+            </tr>
+
+            <tr>
+                <td>Warranty</td>
+                <td>1 Year</td>
+            </tr>
+
+            <tr>
+                <td>In The Box</td>
+                <td>TV, Remote, Batteries, Stand, Manual</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="section" id="about">
+
+    <div class="about">
+
+        <div class="heading">
+
+            <h2>Why Prince Electronics?</h2>
+
+        </div>
+
+        <p>
+            Prince Electronics is focused on bringing modern
+            entertainment technology to every home. Our TVs combine
+            beautiful displays, smart features, powerful sound and
+            stylish designs to create an enjoyable viewing experience.
+        </p>
+
+
+        <div class="numbers">
+
+            <div class="number">
+                <h2>10K+</h2>
+                <p>Happy Customers</p>
+            </div>
+
+            <div class="number">
+                <h2>4.8★</h2>
+                <p>Customer Rating</p>
+            </div>
+
+            <div class="number">
+                <h2>1 Year</h2>
+                <p>Warranty</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- REVIEWS -->
+
+<section class="section">
+
+    <div class="heading">
+
+        <h2>Customer Reviews</h2>
+
+        <p>What our customers say about Prince Electronics.</p>
+
+    </div>
+
+
+    <div class="reviews">
+
+        <div class="review">
+
+            <div class="rating">★★★★★</div>
+
+            <p>
+                "The picture quality is excellent and the TV
+                looks amazing in my living room."
+            </p>
+
+            <div class="reviewer">
+                — Rahul P.
+            </div>
+
+        </div>
+
+
+        <div class="review">
+
+            <div class="rating">★★★★★</div>
+
+            <p>
+                "Very good 4K TV for the price. The smart
+                features are easy to use."
+            </p>
+
+            <div class="reviewer">
+                — Neha S.
+            </div>
+
+        </div>
+
+
+        <div class="review">
+
+            <div class="rating">★★★★☆</div>
+
+            <p>
+                "Good sound, beautiful display and fast
+                delivery. Happy with my purchase."
+            </p>
+
+            <div class="reviewer">
+                — Amit R.
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="section contact" id="contact">
+
+    <div class="heading">
+
+        <h2>Contact Prince Electronics</h2>
+
+        <p>We are here to help you.</p>
+
+    </div>
+
+
+    <div class="contact-box">
+
+        <p>📧 support@princeelectronics.example</p>
+
+        <p>📱 +91 98765 43210</p>
+
+        <p>📍 Gujarat, India</p>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 <strong>Prince Electronics</strong>.
+        All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<script>
+
+function buyNow() {
+
+    alert(
+        "Thank you for choosing Prince Electronics! " +
+        "Your order for Prince Vision 55 inch 4K Smart TV has been selected."
+    );
+
+}
+
+function addCart(product) {
+
+    alert(product + " has been added to your cart!");
+
+}
+
+</script>
+
+
+</body>
+</html>
+
